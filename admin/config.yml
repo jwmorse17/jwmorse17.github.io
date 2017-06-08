@@ -2,8 +2,9 @@ backend:
   name: github
   repo: jwmorse17/jwmorse17.github.io # Path to your Github repository
   branch: master # Branch to update
-  publish_mode: editorial_workflow # allows the editing work flow
-  media_folder: "image/uploads" # where uploads will be stored to
+
+publish_mode: editorial_workflow # allows the editing work flow
+media_folder: "image/uploads" # where uploads will be stored to
 
 collections:
   - name: "blog" # used in routes e.g admin/collections/blog
