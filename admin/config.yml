@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: jwmorse17/jwmorse17.github.io # Path to your Github repository
+  branch: master # Branch to update
+  publish_mode: editorial_workflow # allows the editing work flow
+  media_folder: "img/uploads" # where uploads will be stored to
+
+collections:
+  - name: "blog" # used in routes e.g admin/collections/blog
+    lable: "Blog" # used in the UI
+    folder: "_posts/blog" # the path to the folder where the documents are stored
+    create: true # Allow users to create a new Documents in this collections
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # file name template ie YYYY-MM-DD-title.md
+    fields: # the fields for each document usually i front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "strong"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
